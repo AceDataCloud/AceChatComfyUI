@@ -1,0 +1,22 @@
+{
+  "tested_at": "2026-10-12",
+  "environment": "isolated ComfyUI 0.39.0 / Python 3.11.17 / CPU / local source checkout",
+  "node_registration": {
+    "count": 2,
+    "model_id_input": "freeform STRING"
+  },
+  "workflow_imports": [
+    "01-list-models.json",
+    "02-chat-completion.json"
+  ],
+  "read_only_model_list": {
+    "endpoint": "/v1/models",
+    "http_status": 200,
+    "comfy_status": "success",
+    "current_key_visible_model_id_count": 108
+  },
+  "new_chat_completion_tested": false,
+  "registry_published": false,
+  "manager_installed": false,
+  "billing_readback_tested": false
+}
