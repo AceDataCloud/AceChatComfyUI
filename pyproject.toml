@@ -1,0 +1,18 @@
+[project]
+name = "ace-chat"
+version = "0.1.0"
+description = "Dynamic Ace Data Cloud chat model IDs and completions for ComfyUI"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3"]
+classifiers = ["Operating System :: OS Independent"]
+
+[project.urls]
+Repository = "https://github.com/AceDataCloud/AceChatComfyUI"
+Documentation = "https://github.com/AceDataCloud/AceChatComfyUI#readme"
+"Bug Tracker" = "https://github.com/AceDataCloud/AceChatComfyUI/issues"
+
+[tool.comfy]
+PublisherId = "acedatacloud"
+DisplayName = "Ace Chat by Ace Data Cloud"
+Icon = "https://raw.githubusercontent.com/AceDataCloud/AceChatComfyUI/main/assets/logo-400.png"
