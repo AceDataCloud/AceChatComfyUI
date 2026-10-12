@@ -1,8 +1,8 @@
 # Ace Chat for ComfyUI by Ace Data Cloud
 
-Use a **dynamic model ID** with Ace Data Cloud's chat completions API from a ComfyUI graph. This package mirrors [ModelProviderDify](https://github.com/AceDataCloud/ModelProviderDify), whose model is configured by an exact ID rather than a finite selector. A read-only node lists the IDs currently returned for your Ace key. Chat completions may consume Credits at the [current model price](https://platform.acedata.cloud/models).
+Use a **dynamic model ID** with Ace Data Cloud's chat completions API from a ComfyUI graph. This package mirrors [ModelProviderDify](https://github.com/AceDataCloud/ModelProviderDify), whose model is configured by an exact ID rather than a finite selector. A read-only node lists the IDs currently returned for your Ace key. Chat completions may consume Credits at the [current model price](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acechatcomfyui_readme_en_pricing).
 
-[简体中文](docs/README.zh-CN.md) · [Ace Data Cloud](https://platform.acedata.cloud) · [Issues](https://github.com/AceDataCloud/AceChatComfyUI/issues)
+[简体中文](docs/README.zh-CN.md) · [Ace Data Cloud](https://platform.acedata.cloud?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acechatcomfyui_readme_en_home) · [Issues](https://github.com/AceDataCloud/AceChatComfyUI/issues)
 
 | Node | Purpose |
 | --- | --- |
@@ -28,6 +28,10 @@ Restart ComfyUI and search for **Ace Chat**.
 
 ## Set your key
 
+1. Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acechatcomfyui_readme_en_api_key). If your account has no General application, choose **Initialize General Application**.
+2. Open **General application** and check access to the service used by this package. A service-specific application key is limited to that service. Copy an existing API key, or choose **Manage Keys → Create** for a separate key named `ComfyUI`.
+3. Copy only the token string, without `Bearer ` or quotation marks. A platform management token is not the API key these nodes use. If you enable **Allowed APIs**, include every submission and task-query path used by your workflow. Check current pricing and available Credits before a paid action.
+
 Set an Ace key with chat access in the **actual ComfyUI process environment**, then restart:
 
 ```bash
@@ -43,7 +47,7 @@ Import [01-list-models.json](examples/01-list-models.json) with **File → Open*
 
 Import [02-chat-completion.json](examples/02-chat-completion.json), check the selected model's price, and run **once**. The example is a paid-call template. `prompt` plus optional `system_prompt` creates a simple conversation. `messages_json` can instead contain a full nonempty JSON message array; when present it takes precedence over those two fields. `tools_json` can provide an OpenAI-compatible function tool array. A temperature of `-1` omits the parameter and uses the model default; `max_tokens` limits output.
 
-If the paid request times out, inspect Ace request history before another run. The node does not automatically retry chat submissions. To inspect current usage, use the [Ace Data Cloud Console](https://platform.acedata.cloud/console/applications). See [privacy notes](docs/PRIVACY.md).
+If the paid request times out, inspect Ace request history before another run. The node does not automatically retry chat submissions. To inspect current usage, use the [Ace Data Cloud Console](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=acechatcomfyui_readme_en_api_key). See [privacy notes](docs/PRIVACY.md).
 
 ## Development
 
