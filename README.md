@@ -13,9 +13,11 @@ The chat node returns assistant text, tool calls JSON, usage JSON, response ID, 
 
 ## Install
 
-When the Registry version is active, open **ComfyUI-Manager → Custom Nodes**, search **Ace Chat**, confirm publisher **acedatacloud** and package **Ace Chat by Ace Data Cloud**, install, and restart. Registry ID: `ace-chat`; source: `AceDataCloud/AceChatComfyUI`. Source availability or Registry upload alone does not prove Manager installation.
+Open **Manager → Custom Nodes Manager** and search **Ace Data Cloud**. Select **Ace Chat by Ace Data Cloud**, confirm publisher **acedatacloud** and source repository [`AceDataCloud/AceChatComfyUI`](https://github.com/AceDataCloud/AceChatComfyUI), then click **Install**. In **Select Version**, explicitly select the approved Registry stable release **0.1.0**. The normal dialog may initially highlight **nightly**; do not accept it for this stable-release tutorial. Keep dependency installation enabled. After **Restart Required**, restart ComfyUI and refresh the browser. Registry ID: `ace-chat`.
 
-For local source testing:
+This Registry stable installation was verified on **2026-10-16 with original ComfyUI 0.41.0 on Linux CPU**. That test did not submit a generation or chat request. Newer host versions and each paid action require their own checks; model availability and price remain subject to the current service rules.
+
+For optional local source testing:
 
 ```bash
 cd /path/to/ComfyUI/custom_nodes
